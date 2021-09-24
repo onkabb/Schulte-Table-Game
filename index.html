@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Schulte Table Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet"> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/game.js" defer></script>
+</head>
+
+<body onload="show();"> 
+    <div id="info">
+        <h3>Instructions:</h3>
+        <p>A game for attention and reaction speed. </p>
+        <p>You are given a square table with numbers arranged in random order in the table cells. The numbers in different cells of the table have different colors and sizes. </p>
+        <p>The player must sequentially click on all the numbers in a given interval of time. </p>
+    </div>
+    <div id="menu">
+        <div>
+            <h2 style="margin-bottom: -35pt ">Table size:</h2>
+        </div>
+        <div>
+            <input id="sizeipt" type="text" value="" placeholder="00" maxlength="2" oninput="checkSize()" autofocus>
+        </div> 
+        <div style="font-size: 30px">
+			<input class="custom-checkbox" type="checkbox" id="colors" name="colors">
+			<label for="colors">Use different color and size of numbers</label>
+		</div>
+    </div>
+    <div id="game">
+    </div> 
+    <div id="win" style="display: none; width: auto; margin: auto; text-align: center;">
+    </div>
+    <footer class="footerblocks">
+
+        <div id="timer" class="seconds" style="display: none;">
+            
+        </div>
+        <div id="maxsize">
+            Maximum table size: 10<br>
+            <div id="infobtn" onclick="showInfo()">► Instructions ◄</div>
+            <div id="back" style="display: none;" onclick="showMenu()">► Menu ◄</div>
+        </div>
+
+    </footer>
+</body>
+</html>
